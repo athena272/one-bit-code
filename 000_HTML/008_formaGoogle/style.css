@@ -1,0 +1,66 @@
+body {
+  /*   background-color: #c9c9c9; */
+  font-family: system-ui;
+  background-image: url("https://i0.wp.com/www.toppapeldeparede.com.br/wp-content/uploads/2021/04/50-Minimalist-Desktop-Wallpapers-and.png?fit=1200%2C675&ssl=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  overflow-y: hidden;
+}
+
+#wrapper {
+  margin-inline: auto;
+  margin-top: 20rem;
+  /*  background-color: #c4c4c4; 
+ border-radius: 20px;
+ border: 2px solid;
+ border-color:#d7d9d7 #b3b5b4 #b3b5b4 #d7d9d7; */
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+  border: 1px solid rgba(255, 255, 255, 0.21);
+  width: 32rem;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+}
+
+h1 {
+  width: 15rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 25rem;
+  align-self: center;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+input,
+button {
+  border-width: 0;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+  border: 0px none;
+  line-height: 2rem;
+}
+
+input {
+  padding-left: 0.9rem;
+  width: 18rem;
+  border-radius: 15px 0 0 15px;
+}
+
+button {
+  width: 5.5rem;
+  margin-left: -0.3rem;
+  border-radius: 0 15px 15px 0;
+}

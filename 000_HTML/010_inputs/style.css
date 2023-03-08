@@ -1,0 +1,33 @@
+#welcome 
+{
+  background-color:#9597cc;
+  padding: 20px;
+  text-align:center;
+  color: #010ADA;
+}
+
+#input-types
+{
+  background-color:rgb(247, 255, 241);
+  padding: 20px;
+  color: grey;
+}
+
+#submitButton
+{
+  padding: 10px;
+  color: forestgreen;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+#footer
+{
+  background-color:#9597cc;
+  padding:10px;
+  font-size: x-small;
+  text-align:center;
+  color: #010ADA;
+  
+}

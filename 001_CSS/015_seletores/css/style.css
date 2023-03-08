@@ -1,0 +1,50 @@
+body {
+    background-color: #ffffff;
+    background-image: url(./assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px dashed #808080;
+}
+
+p {
+    color: #ff0000;
+}
+
+.goleiro {
+    color: #ffa500;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lateral {
+    color: #0000ff;
+}
+
+.zagueiro {
+    color: #00ffff;
+}
+
+.meio-campo {
+    color: #ffd700;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.atacante {
+    color: #e9967a;
+}
+
+#tecnico {
+    color: #778899;
+    font-size: large;
+    font-style: italic;
+}
+
+footer {
+    color: #ff0000;
+}

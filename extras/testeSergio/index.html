@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="idpreco" action="" method="POST">
+            <div>
+                Quantidade de quartos:
+                <input type="number" id="quartos" required>
+
+                Metragem:
+                <input type="number" id="metragem" required>
+
+                Preço m²:
+                <input type="number" id="preco" required>
+            </div>
+        </form>
+        <div>
+            <!-- <button>Calcular</button>  -->
+            <input type="button" onclick="calcularImovel()" value="Calcular">
+            <p id="idpreco"></p>
+        </div>
+    </div>
+    
+</body>
+
+</html>

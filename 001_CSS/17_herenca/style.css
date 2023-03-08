@@ -1,0 +1,10 @@
+div
+{
+  border: 2px solid;
+}
+
+div ul 
+{
+  /* Herdar == inherit */
+  border: inherit;
+}

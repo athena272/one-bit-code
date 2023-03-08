@@ -1,0 +1,21 @@
+li
+{
+  color: green;
+  
+}
+
+h1
+{
+  color: purple;
+  /* border-color: orange;
+  border-width: 2px;
+  border-style: solid; */
+  border: 2px solid orange;
+}
+
+body
+{
+  background-image: url('https://static.poder360.com.br/2022/01/spacex.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

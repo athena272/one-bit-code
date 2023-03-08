@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inputs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="welcome" >
+    <h1>
+      Queremos te conhecer:
+    </h1>
+  </div>
+  <div id="input-types">
+      <form action="https://www.youtube.com">
+        <!--Digitar primeiro nome-->
+        <p>Como você gostaria de ser chamado?</p>
+        <input type="text" name="firstname">
+        <br>
+        <br>
+        <!--Digitar email-->
+        <p>Qual seu melhor e-mail?</p>
+        <input type="email" name="email" style="text-transform: lowercase" ;>
+        <br>
+        <br>
+        <!--Digitar senha-->
+        <p>Digite sua senha super secreta:</p>
+        <input type="password" name="psw">
+        <br>
+        <br>
+        <!--Seleção de gênero-->
+        <p>Com qual genero você se identifica?</p>
+        <input type="radio" name="genero" value="feminino" checked> Feminino
+        <br>
+        <input type="radio" name="genero" value="masculino" checked> Masculino
+        <br>
+        <input type="radio" name="genero" value="não-binário" checked> Não-binário
+        <br>
+        <input type="radio" name="genero" value="outro" checked> Prefiro não dizer
+        <br>
+        <br>
+        <!--Escolha uma cor-->
+        <p>Qual sua cor favorita?</p>
+        <input type="color" name="cor favorita">
+        <br>
+        <br>
+        <!--Aniversário-->
+        <p>Quando é seu aniversário?</p>
+        <input type="date" name="aniversário">
+        <br>
+        <br>
+        <!--Subir um arquivo-->
+        <p>Envie seu documento (RG ou CNH):</p>
+        <input type="file" name="arquivo">
+        <br>
+        <br>
+        <!--Botão de enviar-->
+        <br>
+        <div>
+          <input type="submit" value="Pronto!" id="submitButton">
+        </div>
+  
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </form>
+  </div>
+
+  <!--Footer-->
+  <div id="footer">
+    Feito com ❤ por Guilherme R. Alves • 2022
+  </div>
+</body>
+
+</html>

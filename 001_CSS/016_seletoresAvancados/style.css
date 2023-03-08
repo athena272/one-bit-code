@@ -1,0 +1,19 @@
+/* li a 
+{
+
+} */
+
+h1 + h4 {
+    border: 4px dashed
+
+}
+
+a[href='/recibo']
+{
+    color: green;
+}
+
+li:nth-of-type(odd)
+{
+    color: rgb(228, 4, 90);
+}

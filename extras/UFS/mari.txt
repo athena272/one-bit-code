@@ -1,0 +1,10 @@
+calcExpoente (base, expoente)
+calcExpoente (2, 3) = 2 * calcExpoente (2, 3 - 1)
+calcExpoente (2, 2) = 2 * calcExpoente (2, 2 - 1)
+calcExpoente (2, 1) = 2 * calcExpoente (2, 1 - 1)
+calcExpoente (2, 0) = 1
+
+calcExpoente (base, expoente)
+calcExpoente (2, 3) = 2 * 4 = 8
+calcExpoente (2, 2) = 2 * 2 = 4
+calcExpoente (2, 0) = 1

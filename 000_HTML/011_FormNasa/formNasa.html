@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasa Program</title>
+</head>
+
+<body>
+  <h1 style="text-align:center">Nasa Program</h1>
+  <form action="" style="text-align:center">
+    <!-- Name -->
+    <div>
+      <label for="name"><strong>Name:</strong> </label>
+      <input type="text" id="name" name="name">
+    </div>
+    <br>
+    <div>
+      <!-- Email -->
+      <label for="email"><strong>E-mail:</strong> </label>
+      <input type="email" name="email" id="email">
+      <!-- Password -->
+      <label for="inputX"> <strong>-Password:</strong> </label>
+      <input type="inputX" name="inputX" id="inputX">
+    </div>
+    <br>
+    <div>
+      <!-- Nascimento -->
+      <label for="birthdate"><strong>BirthDate:</strong> </label>
+      <input type="birthdate" name="birthdate" id="birthdate">
+      <!-- Foto -->
+      <label for="photo"> <strong>-Photo:</strong> </label>
+      <input type="file" name="photo" id="photo">
+    </div>
+    <br>
+    <div>
+      <!-- Nacionalidade -->
+      <label for="nationality"><strong>Nationality:</strong> </label>
+      <select id="nationality">
+        <option value="russian">Russian</option>
+        <option value="american">American</option>
+        <option value="brazilian">Brazilian</option>
+      </select>
+      <!-- Genero -->
+      <label for=""><strong> -Gender:</strong></label>
+      <label for="female">F</label>
+      <input type="radio" name="gender" value="female">|
+      <label for="male">M</label>
+      <input type="radio" name="gender" value="male">|
+      <label for="notBinary">Not Binary</label>
+      <input type="radio" name="gender" value="notBinary">|
+      <label for="another">Another</label>
+      <input type="radio" name="gender" value="another" checked>
+    </div>
+    <br>
+    <div>
+      <!-- Qualidades -->
+      <p><strong>Your main skills: </strong></p>
+      <label for="int">Intelligence</label>
+      <input type="checkbox" name="int" id="int" /> |
+      <label for="res">Resilience</label>
+      <input type="checkbox" name="res" id="res" /> |
+      <label for="physic">Physical preparation</label>
+      <input type="checkbox" name="physic" id="physic" /> |
+      <label for="edu">Education</label>
+      <input type="checkbox" name="edu" id="edu" />
+    </div>
+    <br>
+    <div>
+      <textarea name="description" id="description" cols="45" rows="10" placeholder="Why do you want to join Nasa?"></textarea>
+    </div>
+    <br>
+    <div>
+      <input type="submit" value="Send" />
+    </div>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cálculo</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <form id="idpreco" action="" method="POST">
+                <label>
+                    <input type="radio" name="radioimovel" class="imovel" value="apartamento" checked>casa
+                </label>
+                <label>
+                    <input type="radio" name="radioimovel" class="imovel" value="casa">apartamento
+                </label>
+                <div>
+                    Quantidade de quartos: 
+                    <input type="number" id="quartos" required> 
+
+                    Metragem:
+                    <input type="number" id="metragem" required>
+                    
+                    Preço m²:
+                    <input type="number" id="m2" required>
+
+                    Nº do andar:
+                    <input type="number" id="andar" required>
+                </div>
+                <div class="button">
+                    <input type="button" id="btnCalculate" onclick="calcularImovel(this.form)" value="Calcular">
+                  
+                </div>
+            </form>
+            <div class="mostra">
+                <span></span>
+            </div>
+        </div>
+        <script src="assets/js/script.js"></script>   
+    </body>
+</html>

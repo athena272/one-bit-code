@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <form id="iddados" action="" method="POST">
+      <section>
+        <h2>Informações de Cadastro</h2>
+
+        <p>
+          <label for="nome"><span>Nome: </span>
+
+          </label>
+          <input type="text" id="nome" />
+        </p>
+        <p>
+          <label for="idade">
+            <span>Idade: </span>
+
+          </label>
+          <input type="number" id="idade" />
+        </p>
+        <p>
+          <label for="cpf">
+            <span>CPF: </span>
+
+          </label>
+          <input type="text" id="cpf" />
+        </p>
+        <!-- Invisble field -->
+        <div class="mostra">
+          <p>
+            <label for="numero">
+              <span>Número: </span>
+
+            </label>
+            <input type="text" id="numero" />
+          </p>
+        </div>
+      </section>
+      <input type="button" onclick="Cadastrar()" value="Mostrar">
+      <p id="iddados"></p>
+
+    </form>
+
+    <br>
+    <input type="radio" id="casa" name="property" value="casa" onchange="switchProperty()">
+    <label for="casa">Casa</label><br>
+    <input type="radio" id="apartamento" name="property" value="CSS" onchange="switchProperty()">
+    <label for="apartamento">Apartamento</label><br>
+
+    <div class="output">
+      <span></span>
+  </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
