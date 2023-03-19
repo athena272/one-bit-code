@@ -1,0 +1,7 @@
+Instalação e configuração
+npm install -g sass
+
+sass --watch sass/style.scss:css/style.css
+
+minify
+sass sass/style.scss:css/minify.css --style compressed
