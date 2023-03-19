@@ -1,0 +1,20 @@
+ @function color-to-use($background) {
+    @if (lightness($background) > 50) {
+        @return black;
+    }
+
+    @else {
+        @return white;
+    }
+}
+
+@mixin background-mixin($color-bg) {
+    background-color: $color-bg;
+    color: color-to-use($color-bg);
+}
+
+.title {
+    
+    height: 100vh;
+    @include background-mixin(rgb(63, 14, 63));
+}
