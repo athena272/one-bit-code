@@ -1,0 +1,3 @@
+.container .cadastro-text {
+    @include text-style($primary-color, $text-size, sans-serif)
+}
