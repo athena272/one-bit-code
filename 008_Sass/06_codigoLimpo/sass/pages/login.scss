@@ -1,0 +1,3 @@
+.container .login-text {
+    @include text-style(rgb(8, 112, 8), $text-size, sans-serif)
+}
