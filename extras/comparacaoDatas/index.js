@@ -1,7 +1,7 @@
 function testarComparacao() {
     //Obter valores de data e converte para um objeto Date
     const experienceDataInicio = new Date(document.querySelector("#experience-dataInicio").value)
-    const experienceDataFim = new Date(document.querySelector("experience-datafim").value)
+    const experienceDataFim = new Date(document.querySelector("#experience-datafim").value)
 
     const graduationDataInicio = new Date(document.querySelector("#graduation-dataInicio").value);
     const graduationDataFim = new Date(document.querySelector("#graduation-datafim").value);
