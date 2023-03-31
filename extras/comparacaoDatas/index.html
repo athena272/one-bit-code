@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Teste de comparação de datas</h1>
+
+    <h2>Experiência</h2>
+    <label for="experience-dataInicio">Data de início:</label>
+    <input type="date" id="experience-dataInicio" name="experience-dataInicio">
+
+    <label for="experience-datafim">Data de fim:</label>
+    <input type="date" id="experience-datafim" name="experience-datafim">
+
+    <h2>Graduação</h2>
+    <label for="graduation-dataInicio">Data de início:</label>
+    <input type="date" id="graduation-dataInicio" name="graduation-dataInicio">
+
+    <label for="graduation-datafim">Data de fim:</label>
+    <input type="date" id="graduation-datafim" name="graduation-datafim">
+
+    <br>
+    <button onclick="testarComparacao()">Testar comparação</button>
+
+    <p id="experience"></p>
+    <p id="graduation"></p>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
