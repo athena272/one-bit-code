@@ -31,3 +31,14 @@ function changeColor({ isValid, element }) {
         element.classList.remove('valid')
     }
 }
+
+function getDataAtual() {
+    const data = new Date();
+    const mes = data.getMonth() + 1; // Obtém o mês
+    const ano = data.getFullYear(); // Obtém o ano
+
+    return new Date(ano, mes - 1);
+}
+
+const dataAtual = getDataAtual();
+console.log(dataAtual); // Exemplo de saída: Mon Apr 01 2023 00:00:00 GMT-0300 (Horário Padrão de Brasília)
