@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+}
+
+h1, h2 {
+    text-align: center;
+    color: white;
+    margin: 3% auto;
+}
+
+.coll {
+    background-color: #ff0043;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+}
