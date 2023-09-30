@@ -1,0 +1,8 @@
+#app {
+    color: #fff;
+    background-color: #232323;
+    font-family: sans-serif;
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
