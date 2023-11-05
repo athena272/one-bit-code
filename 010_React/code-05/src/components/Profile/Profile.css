@@ -29,7 +29,12 @@
     align-items: center;
 }
 
-.links>a {
+button {
+    margin: 20px auto 0;
+}
+
+.links>a, button {
+    border: none;
     background: rgb(66, 140, 209);
     background: linear-gradient(45deg, rgb(30, 112, 189) 10%, rgb(124, 212, 235) 100%);
     border-radius: .75rem;
@@ -44,7 +49,7 @@
     width: 10rem;
 }
 
-.links>a:hover {
+.links>a:hover, button {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     bottom: .25rem;
 }
