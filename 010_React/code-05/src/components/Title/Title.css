@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-button {
+/* button {
     margin: 10px auto;
     border: none;
     background: rgb(66, 140, 209);
@@ -19,4 +19,4 @@ button {
     text-decoration: none;
     transition: .2s;
     width: 10rem;
-}
+} */
