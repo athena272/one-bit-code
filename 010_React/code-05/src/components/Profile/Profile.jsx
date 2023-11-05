@@ -1,10 +1,15 @@
 import './Profile.css'
 import PropTypes from 'prop-types';
+import Title from '../Title/Title';
 
 const Profile = ({ avatar, name, bio, phone, email, githubUrl, linkedinUrl, twitterUrl }) => (
     <div className="container">
         <img className="avatar" src={avatar} alt={name} />
-        <h2 className="name">{name}</h2>
+        <Title>
+            <span>Name: {name}</span>
+            
+            <button>Follow</button>
+        </Title>
         <div>{bio}</div>
         <div>{phone}</div>
         <div>{email}</div>
