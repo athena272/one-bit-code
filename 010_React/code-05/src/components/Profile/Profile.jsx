@@ -1,22 +1,24 @@
 import './Profile.css'
 import PropTypes from 'prop-types';
 import Title from '../Title/Title';
+import ProfileSection from '../ProfileSection/ProfileSection';
+import LinkButton from '../LinkButton/LinkButton';
 
 const Profile = ({ avatar, name, bio, phone, email, githubUrl, linkedinUrl, twitterUrl }) => (
     <div className="container">
         <img className="avatar" src={avatar} alt={name} />
         <Title>
             <span>Name: {name}</span>
-            
+
             <button>Follow</button>
         </Title>
-        <div>{bio}</div>
-        <div>{phone}</div>
-        <div>{email}</div>
+        <ProfileSection>{bio}</ProfileSection>
+        <ProfileSection>{phone}</ProfileSection>
+        <ProfileSection>{email}</ProfileSection>
         <div className="links">
-            <a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a>
-            <a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href={twitterUrl} target="_blank" rel="noreferrer">Twitter</a>
+            <LinkButton url={githubUrl}>GitHub</LinkButton>
+            <LinkButton url={linkedinUrl}>LinkedIn</LinkButton>
+            <LinkButton url={twitterUrl}>Twitter</LinkButton>
         </div>
     </div>
 )
