@@ -15,11 +15,16 @@ const Profile = ({ avatar, name, bio, phone, email, githubUrl, linkedinUrl, twit
         <ProfileSection>{bio}</ProfileSection>
         <ProfileSection>{phone}</ProfileSection>
         <ProfileSection>{email}</ProfileSection>
-        <div className="links">
+        <ProfileSection
+            id="links-section"
+            data-test="some value"
+            aria-label="social links"
+            className="links"
+        >
             <LinkButton url={githubUrl}>GitHub</LinkButton>
             <LinkButton url={linkedinUrl}>LinkedIn</LinkButton>
             <LinkButton url={twitterUrl}>Twitter</LinkButton>
-        </div>
+        </ProfileSection>
     </div>
 )
 
