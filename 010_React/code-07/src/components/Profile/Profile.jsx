@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import Title from '../Title/Title';
 import ProfileSection from '../ProfileSection/ProfileSection';
 import LinkButton from '../LinkButton/LinkButton';
+import { useState } from 'react';
 
 const Profile = ({ avatar, name, bio, phone, email, githubUrl, linkedinUrl, twitterUrl }) => {
-    function handleClick(ev) {
-        console.log(ev)
+    const [text, setText] = useState('Follow')
+
+    function handleClick() {
+        setText('Following')
         alert("Você agora está seguindo!")
     }
 
@@ -16,7 +19,7 @@ const Profile = ({ avatar, name, bio, phone, email, githubUrl, linkedinUrl, twit
             <Title>
                 <span>Name: {name}</span>
 
-                <button className='followButton' onClick={handleClick}>Follow</button>
+                <button className='followButton' onClick={handleClick}>{text}</button>
             </Title>
             <ProfileSection>{bio}</ProfileSection>
             <ProfileSection>{phone}</ProfileSection>
