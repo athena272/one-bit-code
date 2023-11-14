@@ -29,7 +29,7 @@ const App = () => {
         <label htmlFor="passwordSize">Tamanho: </label>
         <input type="number" id="passwordSize" min={1} max={50} value={passwordSize} onChange={(ev) => setPasswordSize(ev.target.value)} />
       </div>
-      <button onClick={generatePassword}>Gerar senha de {passwordSize} caracteres!</button>
+      <button onClick={generatePassword}>Gerar senha de {passwordSize} caracteres</button>
       <button onClick={copyToClipboard}>{copyText}</button>
       <div>{password}</div>
     </>
