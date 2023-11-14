@@ -3,6 +3,7 @@ import './App.css'
 
 const App = () => {
   const [password, setPassword] = useState("Sua senha aqui!")
+  const [passwordSize, setPasswordSize] = useState(12)
   const [copyText, setCopyText] = useState("Copiar")
 
   function generatePassword() {
@@ -25,7 +26,11 @@ const App = () => {
   return (
     <>
       <h1>Gerador de senhas</h1>
-      <button onClick={generatePassword}>Gerar!</button>
+      <div>
+        <label htmlFor="passwordSize">Tamanho: </label>
+        <input type="number" id="passwordSize" min={1} max={50} value={passwordSize} onChange={(ev) => setPasswordSize(ev.target.value)} />
+      </div>
+      <button onClick={generatePassword}>Gerar senha de {passwordSize} caracteres!</button>
       <button onClick={copyToClipboard}>{copyText}</button>
       <div>{password}</div>
     </>
