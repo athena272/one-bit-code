@@ -8,9 +8,8 @@ const App = () => {
 
   function generatePassword() {
     const characters = "'1234567890-=!@#$%¨&*()_+qwertyuiop[asdfghjklç~]zxcvbnm,.;/QWERTYUIOP{ASDFGHJKLÇ^}ZXCVBNM<>:?"
-    const length = 12
     let newPassword = ""
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < passwordSize; i++) {
       const position = Math.floor(Math.random() * characters.length)
       newPassword += characters[position]
     }
