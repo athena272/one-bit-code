@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 const App = () => {
-  const [password, setPassword] = useState("Senha inicial")
+  const [password, setPassword] = useState("Sua senha aqui!")
   const [copyText, setCopyText] = useState("Copiar")
 
   function generatePassword() {
