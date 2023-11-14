@@ -1,9 +1,17 @@
 import { useState } from "react";
 
-export function useAdd() {
-    const [count, setCount] = useState(0)
+function getInitialValue() {
+    console.log("obtendo valor inicial")
+    return 1 + 1
+}
 
-    const increment = () => setCount(count + 1)
+export function useAdd() {
+    const [count, setCount] = useState(() => getInitialValue())
+
+    const increment = () => {
+        setCount((previusCount) => previusCount + 1)
+        setCount((previusCount) => previusCount + 1)
+    }
 
     return [count, increment]
 }
