@@ -1,33 +1,33 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [password, setPassword] = useState("Senha inicial")
+  const [copyText, setCopyText] = useState("Copiar")
+
+  function generatePassword() {
+    const characters = "'1234567890-=!@#$%¨&*()_+qwertyuiop[asdfghjklç~]zxcvbnm,.;/QWERTYUIOP{ASDFGHJKLÇ^}ZXCVBNM<>:?"
+    const length = 12
+    let newPassword = ""
+    for (let i = 0; i < length; i++) {
+      const position = Math.floor(Math.random() * characters.length)
+      newPassword += characters[position]
+    }
+    setPassword(newPassword)
+    setCopyText("Copiar")
+  }
+
+  function copyToClipboard() {
+    window.navigator.clipboard.writeText(password)
+    setCopyText("Copiado!")
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Gerador de senhas</h1>
+      <button onClick={generatePassword}>Gerar!</button>
+      <button onClick={copyToClipboard}>{copyText}</button>
+      <div>{password}</div>
     </>
   )
 }
