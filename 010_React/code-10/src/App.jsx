@@ -9,7 +9,7 @@ const App = () => {
   const [showInput, setShowInput] = useState(false)
   const [copyText, setCopyText] = useState("Copiar")
 
-  const passwordSize = showInput ? customSize : 12
+  const passwordSize = showInput ? customSize : 8
 
   function generatePassword() {
     const characters = "'1234567890-=!@#$%¨&*()_+qwertyuiop[asdfghjklç~]zxcvbnm,.;/QWERTYUIOP{ASDFGHJKLÇ^}ZXCVBNM<>:?"
