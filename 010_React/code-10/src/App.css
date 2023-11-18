@@ -19,3 +19,7 @@ input {
   font-size: 1.25rem;
 }
 
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
