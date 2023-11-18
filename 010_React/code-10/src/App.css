@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  margin: 0 50px 40px;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+input {
+  margin-bottom: 30px;
+  padding: 10px 0 10px 5px;
+  font-size: 1.25rem;
+}
+
