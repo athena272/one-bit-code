@@ -1,0 +1,15 @@
+img {
+    width: 20rem;
+    height: 30rem;
+    object-fit: cover;
+    ;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    max-width: 20rem;
+    text-align: center;
+}

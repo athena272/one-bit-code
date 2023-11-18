@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  padding: 0 5rem 5rem
+}
+
+.gameList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem
+}
