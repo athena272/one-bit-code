@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import './GameItem.css'
 
 const GameItem = ({ game }) => (
-    <div key={game.id}>
+    <div id={game.id}>
         <img
             src={game.coverImage}
             alt={game.title}
