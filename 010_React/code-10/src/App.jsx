@@ -5,7 +5,7 @@ import './App.css'
 
 const App = () => {
   const [password, setPassword] = useState("Sua senha aqui!")
-  const [passwordSize, setPasswordSize] = useState(12)
+  const [customSize, setCustomSize] = useState(12)
   const [showInput, setShowInput] = useState(false)
   const [copyText, setCopyText] = useState("Copiar")
 
@@ -29,11 +29,13 @@ const App = () => {
     <>
       <h1>Gerador de senhas</h1>
       <Checkbox showInput={showInput} setShowInput={setShowInput} />
-      <div>
-        <label htmlFor="passwordSize">Tamanho: </label>
-        <Input passwordSize={passwordSize > 50 ? setPasswordSize(50) : passwordSize} setPasswordSize={setPasswordSize} />
-      </div>
-      <button onClick={generatePassword}>Gerar senha de {passwordSize} caracteres</button>
+      {showInput ? (
+        <div>
+          <label htmlFor="passwordSize">Tamanho: </label>
+          <Input passwordSize={passwordSize > 50 ? setPasswordSize(50) : passwordSize} setPasswordSize={setPasswordSize} />
+        </div>
+      ) : null}
+      <button onClick={generatePassword}>Gerar senha de {showInput ? passwordSize : 12} caracteres</button>
       <button onClick={copyToClipboard}>{copyText}</button>
       <div>{password}</div>
     </>
