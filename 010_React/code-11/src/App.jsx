@@ -3,7 +3,7 @@ import GameItem from './components/GameItem/GameItem.jsx'
 import './App.css'
 
 const App = () => (
-  <div className='app' style={{ padding: "0 5rem 5rem" }}>
+  <div className='app'>
     <h1>Meus Jogos</h1>
     <div className='gameList'>
       {games.map((game) => (
