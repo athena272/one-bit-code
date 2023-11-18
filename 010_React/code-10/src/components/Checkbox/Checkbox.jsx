@@ -7,7 +7,7 @@ const Checkbox = ({ showInput, setShowInput }) => (
             type="checkbox"
             id="showInput"
             value={showInput}
-            onChange={() => setShowInput(show => !show)}
+            onChange={() => setShowInput(currentShow => !currentShow)}
         />
     </>
 )
