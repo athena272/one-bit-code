@@ -9,6 +9,8 @@ const App = () => {
   const [showInput, setShowInput] = useState(false)
   const [copyText, setCopyText] = useState("Copiar")
 
+  const passwordSize = showInput ? customSize : 12
+
   function generatePassword() {
     const characters = "'1234567890-=!@#$%¨&*()_+qwertyuiop[asdfghjklç~]zxcvbnm,.;/QWERTYUIOP{ASDFGHJKLÇ^}ZXCVBNM<>:?"
     let newPassword = ""
@@ -29,13 +31,13 @@ const App = () => {
     <>
       <h1>Gerador de senhas</h1>
       <Checkbox showInput={showInput} setShowInput={setShowInput} />
-      {showInput ? (
+      {showInput && (
         <div>
           <label htmlFor="passwordSize">Tamanho: </label>
-          <Input passwordSize={passwordSize > 50 ? setPasswordSize(50) : passwordSize} setPasswordSize={setPasswordSize} />
+          <Input passwordSize={customSize > 50 ? setCustomSize(50) : customSize} setPasswordSize={setCustomSize} />
         </div>
-      ) : null}
-      <button onClick={generatePassword}>Gerar senha de {showInput ? passwordSize : 12} caracteres</button>
+      )}
+      <button onClick={generatePassword}>Gerar senha de {passwordSize} caracteres</button>
       <button onClick={copyToClipboard}>{copyText}</button>
       <div>{password}</div>
     </>
