@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 
 const Checkbox = ({ showInput, setShowInput }) => (
-    <>
+    <div>
         <label htmlFor="showInput">Customizar tamanho:</label>
         <input
             type="checkbox"
@@ -9,7 +9,7 @@ const Checkbox = ({ showInput, setShowInput }) => (
             value={showInput}
             onChange={() => setShowInput(currentShow => !currentShow)}
         />
-    </>
+    </div>
 )
 
 Checkbox.propTypes = {
