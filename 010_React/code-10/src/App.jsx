@@ -28,7 +28,7 @@ const App = () => {
       <h1>Gerador de senhas</h1>
       <div>
         <label htmlFor="passwordSize">Tamanho: </label>
-        <Input passwordSize={passwordSize} setPasswordSize={setPasswordSize} />
+        <Input passwordSize={passwordSize > 50 ? setPasswordSize(50) : passwordSize} setPasswordSize={setPasswordSize} />
       </div>
       <button onClick={generatePassword}>Gerar senha de {passwordSize} caracteres</button>
       <button onClick={copyToClipboard}>{copyText}</button>
