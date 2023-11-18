@@ -7,7 +7,7 @@ const Input = ({ passwordSize, setPasswordSize }) => (
         min={1}
         max={50}
         value={passwordSize}
-        onChange={(ev) => setPasswordSize(ev.target.value)}
+        onChange={(ev) => setPasswordSize(+ev.target.value)}
     />
 
 )
