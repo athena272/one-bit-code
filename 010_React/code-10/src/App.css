@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+div {
+  margin-bottom: 15px;
+}
+
 button {
   margin: 0 50px 40px;
 }
