@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css'
+import { useState } from "react"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div id="app">
+      <h2>Seção de Comentários</h2>
+      <form>
+        <label htmlFor="author">Email</label>
+        <input type="text" id="author" required />
+        <label htmlFor="content">Comentário</label>
+        <textarea id="content" cols="30" rows="6" required></textarea>
+        <button>Enviar comentário</button>
+      </form>
+      <hr />
+      <section id="comments">
+        <div>
+          <h3>autor@email.com</h3>
+          <span>Em 01/01/2001</span>
+          <p>Comentário de exemplo</p>
+        </div>
+      </section>
+    </div>
   )
 }
-
 export default App
