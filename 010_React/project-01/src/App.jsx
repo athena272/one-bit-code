@@ -23,7 +23,7 @@ const App = () => {
               />
             ))
             :
-            <h2>Parece que nenhum não tem nada aqui :(, tente adicionar jogos</h2>
+            <h2 style={{ margin: '4rem auto' }}>Tente adicionar jogos. Parece que nenhum não tem nada aqui :(</h2>
         }
       </div>
     </div>
