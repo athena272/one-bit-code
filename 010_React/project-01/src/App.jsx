@@ -11,15 +11,20 @@ const App = () => {
       <h1>Biblioteca de Jogos</h1>
       <GameForm addGame={addGame} />
       <div className="games">
-        {games.map(game => (
-          <Game
-            key={game.id}
-            id={game.id}
-            title={game.title}
-            cover={game.cover}
-            onRemove={() => removeGame(game.id)}
-          />
-        ))}
+        {
+          games.length > 0 ?
+            games.map(game => (
+              <Game
+                key={game.id}
+                id={game.id}
+                title={game.title}
+                cover={game.cover}
+                onRemove={() => removeGame(game.id)}
+              />
+            ))
+            :
+            <h2>Parece que nenhum não tem nada aqui :(, tente adicionar jogos</h2>
+        }
       </div>
     </div>
   )
