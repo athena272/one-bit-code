@@ -8,15 +8,19 @@ function App() {
   return (
     <>
       <h1>Conhecendo o useEffect()</h1>
-      <Counter position={1} />
+      <div>
+        <label htmlFor='show'> Exibir</label>
+        <input style={{ width: '20px', height: '20px', marginLeft: '10px', marginBottom: '0' }}
+          id='show'
+          type="checkbox"
+          value={show}
+          onChange={() => setShow(currentShow => !currentShow)}
+        />
+      </div>
       <br />
       <hr />
       <br />
-      <button
-        onClick={() => setCount2(count => count + 1)}
-      >
-        2º Contador: {count2}
-      </button>
+      <Counter position={1} />
     </>
   )
 }
