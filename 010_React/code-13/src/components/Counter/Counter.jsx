@@ -5,7 +5,7 @@ const Counter = ({ position }) => {
     const [count, setCount] = useState(0)
 
     useEffect(() => {
-        alert('O efeito colateral foi ativado!')
+        console.log('O efeito colateral foi ativado!')
 
         return () => console.log("limpnando efeito colateral... COMPONENTE DESMONTADO")
     }, [count])
