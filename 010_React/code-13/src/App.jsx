@@ -9,7 +9,7 @@ function App() {
     <>
       <h1>Conhecendo o useEffect()</h1>
       <div>
-        <label htmlFor='show'> Exibir</label>
+        <label htmlFor='show' style={{ fontSize: '1.75rem' }}> Exibir</label>
         <input style={{ width: '20px', height: '20px', marginLeft: '10px', marginBottom: '0' }}
           id='show'
           type="checkbox"
@@ -20,7 +20,9 @@ function App() {
       <br />
       <hr />
       <br />
-      <Counter position={1} />
+      {
+        show && <Counter position={1} />
+      }
     </>
   )
 }
