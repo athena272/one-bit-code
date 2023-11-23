@@ -8,7 +8,7 @@ async function fetchPokemon() {
 }
 
 function App() {
-  const [pokemon, setPokemon] = useState([])
+  const [pokemons, setPokemons] = useState([])
   const [url, setUrl] = useState(null)
   const [pokemonShown, setPokemonShown] = useState(null)
 
@@ -16,7 +16,7 @@ function App() {
     fetchPokemon().then(result => {
       console.log("Requisição realizada")
       console.log(result)
-      setPokemon(result)
+      setPokemons(result)
     })
   }, [])
 
@@ -35,7 +35,7 @@ function App() {
       <div>
         <h2>Pokémon</h2>
         <ul className="pokemon">
-          {pokemon.map(mon => (
+          {pokemons.map(mon => (
             <li key={mon.name}>
               <span>{mon.name}</span>
               <button onClick={() => setUrl(mon.url)}>
