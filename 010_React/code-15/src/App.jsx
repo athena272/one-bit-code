@@ -35,10 +35,10 @@ function App() {
       <div>
         <h2>Pokémon</h2>
         <ul className="pokemon">
-          {pokemons.map(mon => (
-            <li key={mon.name}>
-              <span>{mon.name}</span>
-              <button onClick={() => setUrl(mon.url)}>
+          {pokemons.map(pokemon => (
+            <li key={pokemon.name}>
+              <span>{pokemon.name}</span>
+              <button onClick={() => setUrl(pokemon.url)}>
                 Ver detalhes
               </button>
             </li>
