@@ -11,21 +11,21 @@ function App() {
   const [pokemons, setPokemons] = useState([])
   const [pokemonShown, setPokemonShown] = useState(null)
 
-  // useEffect(() => {
-  //   fetchPokemon().then(result => {
-  //     console.log("Requisição realizada")
-  //     console.log(result)
-  //     setPokemons(result)
-  //   })
-  // }, [])
-
-  if (pokemons.length === 0) {
+  useEffect(() => {
     fetchPokemon().then(result => {
       console.log("Requisição realizada")
       console.log(result)
       setPokemons(result)
     })
-  }
+  }, [])
+
+  // if (pokemons.length === 0) {
+  //   fetchPokemon().then(result => {
+  //     console.log("Requisição realizada")
+  //     console.log(result)
+  //     setPokemons(result)
+  //   })
+  // }
 
   const showDetails = async (url) => {
     const data = await fetch(url).then(result => result.json())
