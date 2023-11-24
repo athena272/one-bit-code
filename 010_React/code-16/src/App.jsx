@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './components/Header/Header'
 import UserInfo from './components/UserInfo/UserInfo'
-import UserContext from './context/UserContext';
+import UserContext from './contexts/UserContext';
 
 const App = () => {
   const user = {
