@@ -4,7 +4,7 @@ import products from '../../database.json'
 const Product = () => {
     const { productId } = useParams()
 
-    const product = products.find(product => product.id === productId)
+    const product = products.find(product => product.id === +productId)
 
     if (!product) {
         return (
