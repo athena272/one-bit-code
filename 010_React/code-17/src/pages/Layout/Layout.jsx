@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom"
 
 const Layout = () => (
     <>
-        <header>
+        <header style={{ display: 'flex', justifyContent: 'center' }}>
             <nav style={{ display: "flex", gap: "2rem" }}>
                 <Link to="/">Início</Link>
                 <Link to="/products">Produtos</Link>
