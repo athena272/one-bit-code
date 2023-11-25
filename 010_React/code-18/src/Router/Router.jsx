@@ -3,7 +3,9 @@ import Admin from '../components/Admin/Admin'
 import Cart from '../components/Cart/Cart'
 import Home from '../components/Home/Home'
 import Products from '../components/Products/Products'
+import Product from '../components/Product/Product'
 import Layout from '../pages/Layout/Layout'
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -13,8 +15,12 @@ const router = createBrowserRouter([
             element: <Home />
         },
         {
-            path: "products/:productId",
+            path: "products",
             element: <Products />
+        },
+        {
+            path: 'products/:productId',
+            element: <Product />
         },
         {
             path: "cart",
