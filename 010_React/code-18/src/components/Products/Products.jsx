@@ -1,24 +1,38 @@
+import { Link, useParams } from "react-router-dom"
 import products from '../../database.json'
 
-const Product = () => (
+const Product = () => {
+    const { productId } = useParams()
 
-    <section>
-        <h2>Todos os produtos</h2>
-        <p>Confira todas as nossas ofertas.</p>
-        <section className="products">
-            <h3>Processadores</h3>
-            <ul>
-                {products.map((product) => (
-                    <li key={product.id}>
-                        <h4>{product.name}</h4>
-                        <p>R$ {product.price}</p>
-                        <button style={{ marginRight: '10px' }}>Ver</button>
-                        <button>Compras</button>
-                    </li>
-                ))}
-            </ul>
+    const product = products.find(product => product.id === productId)
+
+    if (!product) {
+        return (
+            <h2>Oops... Esse produto não foi encontrado =(</h2>
+        )
+    }
+    
+    return (
+        <section>
+            <h2>Todos os produtos</h2>
+            <p>Confira todas as nossas ofertas.</p>
+            <section className="products">
+                <h3>Processadores</h3>
+                <ul>
+                    {products.map((product) => (
+                        <li key={product.id}>
+                            <h4>{product.name}</h4>
+                            <p>R$ {product.price}</p>
+                            <Link to={`/products/${product.id}`}>
+                                <button style={{ marginRight: '10px' }}>Ver</button>
+                            </Link>
+                            <button>Compras</button>
+                        </li>
+                    ))}
+                </ul>
+            </section>
         </section>
-    </section>
-)
+    )
+}
 
 export default Product
