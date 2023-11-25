@@ -6,12 +6,6 @@ const Product = () => {
 
     const product = products.find(product => product.id === +productId)
 
-    if (!product) {
-        return (
-            <h2>Oops... Esse produto não foi encontrado =(</h2>
-        )
-    }
-
     return (
         <section>
             <Link to="/products">
