@@ -1,15 +1,16 @@
 <script>
+import Github from './components/Github/Github.vue';
+
 export default {
-  data() {
-    return {
-      count: 0
-    }
+  components: {
+    Github
   }
 }
 </script>
 
 <template>
-  <button type="button" v-on:click="count++">Contador: {{ count }}</button>
+  <!-- <button type="button" v-on:click="count++">Contador: {{ count }}</button> -->
+  <Github />
 </template>
 
 <style scoped>
