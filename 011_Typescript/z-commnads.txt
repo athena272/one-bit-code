@@ -1,0 +1,5 @@
+npm init -y
+
+npm intall --save-dev typescript
+
+npx tsc index.ts
