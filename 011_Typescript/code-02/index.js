@@ -2,7 +2,7 @@ var setPilot = function (newPilot, spaceship) {
     spaceship.pilot = newPilot;
 };
 var accelerate = function (targetSpeed, spaceship) {
-    spaceship.speed = targetSpeed;
+    spaceship.speed += targetSpeed;
 };
 var sendToMission = function (spaceship) {
     spaceship.inMission = true;
