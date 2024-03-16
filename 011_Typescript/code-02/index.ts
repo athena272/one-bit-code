@@ -3,7 +3,7 @@ const setPilot = (newPilot: string, spaceship: { name?: string; pilot: string; s
 }
 
 const accelerate = (targetSpeed: number, spaceship: { name?: string; pilot?: string; speed: any; inMission?: boolean; }) => {
-    spaceship.speed = targetSpeed;
+    spaceship.speed += targetSpeed;
 }
 
 const sendToMission = (spaceship: { name?: string; pilot?: string; speed?: number; inMission: any; }) => {
