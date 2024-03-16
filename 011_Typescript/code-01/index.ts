@@ -3,11 +3,11 @@ const spaceShip = {
     speed: 140,
 }
 
-function accelerate(spaceShip: { name: string; speed: number }, speed: number) {
+function accelerateTeste(spaceShip: { name: string; speed: number }, speed: number) {
     spaceShip.speed += speed
 }
 
-accelerate(spaceShip, 40)
-accelerate(spaceShip, 40)
+accelerateTeste(spaceShip, 40)
+accelerateTeste(spaceShip, 40)
 
 console.log(spaceShip)
