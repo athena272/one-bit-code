@@ -26,3 +26,5 @@ const spaceshipName = prompt('Insira o nome da nave a ser enviada:')
 const spaceshipCaptain = prompt('Insira o nome do capitão da nave:')
 
 sendSpaceship(spaceshipName, spaceshipCaptain)
+
+const currentShip = sendSpaceship(spaceshipName, spaceshipCaptain)
