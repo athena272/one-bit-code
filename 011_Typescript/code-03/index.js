@@ -23,3 +23,4 @@ function accelerate(targetSpeed, spaceship) {
 var spaceshipName = prompt('Insira o nome da nave a ser enviada:');
 var spaceshipCaptain = prompt('Insira o nome do capitão da nave:');
 sendSpaceship(spaceshipName, spaceshipCaptain);
+var currentShip = sendSpaceship(spaceshipName, spaceshipCaptain);
