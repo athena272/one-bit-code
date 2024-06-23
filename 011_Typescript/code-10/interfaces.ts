@@ -66,3 +66,27 @@ class BigAsteroid implements Asteroid {
         this.size = size
     }
 }
+
+// Apesar de serem poucas, existem diferenças entre Types e Interfaces
+
+// Uma delas é a possibilidade de adicionar mais
+// propriedades definindo novamente a mesma interface
+interface Planet {
+    orbitedStar?: Star
+}
+
+let earth: Planet = {
+    name: "Terra",
+    mass: 5.972 * Math.pow(10, 24),
+    population: 8000000000,
+    createSatellite: (name: string) => {
+        // ...
+    },
+    orbitedStar: sun
+}
+
+// O mesmo não é possível com Types
+// O código abaixo gera um erro
+//   type Planet = {
+//     satellites: string[]
+//   }
