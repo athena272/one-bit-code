@@ -5,3 +5,4 @@ npm intall --save-dev typescript
 npx tsc index.ts
 
 tsc --target ES6
+tsc --target ESNEXT
