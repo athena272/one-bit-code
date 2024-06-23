@@ -110,3 +110,78 @@ function promptValidPlanet(callback: (planet: Planet) => void) {
         alert('Planeta não encontrado! Retornando ao menu...')
     }
 }
+
+function firstMenuOption() {
+    const name = prompt('Informe o nome do planeta:')
+    if (name === null) return
+
+    const coordinateA = Number(prompt('Informe a primeira coordenada:'))
+    const coordinateB = Number(prompt('Informe a segunda coordenada:'))
+    const coordinateC = Number(prompt('Informe a terceira coordenada:'))
+    const coordinateD = Number(prompt('Informe a quarta coordenada:'))
+
+    // Aqui a nossa função ajuda a ter um código mais organizado
+    const situation = promptValidSituation()
+
+    const confirmation = confirm(`Confirma o registro do planeta ${name}?
+    Coordenadas: (${coordinateA}, ${coordinateB}, ${coordinateC}, ${coordinateD})
+    Situação: ${situation}`)
+
+    if (confirmation) {
+        addPlanet(name, [coordinateA, coordinateB, coordinateC, coordinateD], situation)
+    }
+}
+
+// Nessas três funções vemos como a nossa função de callback
+// proporciona uma facilidade enorme na implementação
+function secondMenuOption() {
+    // Além disso temos acesso automático às informações
+    // dos argumentos, nesse caso a variável planet
+    promptValidPlanet(planet => {
+        const situation = promptValidSituation()
+        updateSituation(situation, planet)
+    })
+}
+
+function thirdMenuOption() {
+    promptValidPlanet(planet => {
+        const satellite = prompt('Informe o nome do satélite a ser adicionado:')
+        if (satellite === null) return
+
+        addSatellite(satellite, planet)
+    })
+}
+
+function fourthMenuOption() {
+    promptValidPlanet(planet => {
+        const satellite = prompt('Informe o nome do satélite a ser removido:')
+        if (satellite === null) return
+
+        removeSatellite(satellite, planet)
+    })
+}
+
+function fifthMenuOption() {
+    let list = 'Planetas:\n'
+
+    planets.forEach(planet => {
+        // Repare que as tuplas são uma forma fácil de permitir a
+        // desestruturação com qualquer nome nas variáveis.
+        // As variáveis a seguir podem ter qualquer nome pois a
+        // tupla segue um padrão fixo.
+        const [a, b, c, d] = planet.coordinates
+
+        list += `
+        Nome: ${planet.name}
+        Coordenadas: (${a}, ${b}, ${c}, ${d})
+        Situação: ${planet.situation}
+        Satélites: ${planet.satellites.length}
+      `
+
+        planet.satellites.forEach(satellite => {
+            list += `    - ${satellite}\n`
+        })
+    })
+
+    alert(list)
+}
