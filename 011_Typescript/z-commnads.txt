@@ -6,3 +6,5 @@ npx tsc index.ts
 
 tsc --target ES6
 tsc --target ESNEXT
+
+npm install --save-dev @types/lodash
