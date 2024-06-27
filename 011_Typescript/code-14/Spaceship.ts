@@ -13,3 +13,24 @@ class Spaceship {
         this.speed = rate * time
     }
 }
+
+class Fighter extends Spaceship {
+    weapons: number
+    // O atributo weapons existe mesmo sem um construtor
+
+    shoot() {
+        for (let i = 0; i < this.weapons; i++) {
+            console.log('Pew!')
+        }
+    }
+
+    erase() {
+        this.name = ''
+        this.captain = ''
+    }
+}
+
+let ship = new Spaceship({
+    name: "USS Enterprise",
+    captain: "James T. Kirk"
+})
