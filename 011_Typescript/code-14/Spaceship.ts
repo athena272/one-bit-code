@@ -30,6 +30,11 @@ class Fighter extends Spaceship {
     weapons: number
     // O atributo weapons existe mesmo sem um construtor
 
+    constructor({ name, captain, weapons }: { name: string, captain: string, weapons: number }) {
+        super({ name, captain })
+        this.weapons = weapons
+    }
+
     shoot() {
         for (let i = 0; i < this.weapons; i++) {
             console.log('Pew!')
@@ -47,6 +52,15 @@ let ship = new Spaceship({
     captain: "James T. Kirk"
 })
 
+let xWing = new Fighter({
+    name: "X-wing",
+    captain: "Luke Skywalker",
+    weapons: 4
+})
+
 ship.accelerate({ rate: 2, time: 16 })
 console.log("🚀 ~ ship.accelerate:", ship)
+
+xWing.accelerate({ rate: 6, time: 20 })
+console.log("🚀 ~ xWing:", xWing)
 
