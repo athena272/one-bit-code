@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulário simples final</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Contato (Final form)</h1>
+
+    <form id="contactForm">
+      <label for="name">Nome <span>*</span></label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Digite o seu nome"
+      />
+      <small class="error" id="nameError"></small>
+
+      <label for="email">E-mail <span>*</span></label>
+      <input
+        id="email"
+        name="email"
+        type="text"
+        placeholder="Digite o seu e-mail"
+      />
+      <small class="error" id="emailError"></small>
+
+      <label for="message">Mensagem <span>*</span></label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="Digite a sua mensagem"
+      ></textarea>
+      <small class="error" id="messageError"></small>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

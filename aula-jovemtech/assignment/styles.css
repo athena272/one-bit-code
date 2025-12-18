@@ -1,0 +1,172 @@
+/* =========================
+   JovemTech-ish theme
+   ========================= */
+
+:root {
+  /* Base */
+  --bg: #f4f4f7;
+  --surface: #ffffff;
+  --text: #1d1b1c;
+  --muted: #6b7280;
+  --border: #e6e8ef;
+
+  /* Brand-ish (aprox. do site) */
+  --primary: #2797cd; /* azul */
+  --primary-2: #3ddeff; /* ciano */
+  --accent: #a777ec; /* roxo */
+  --accent-2: #3d328f; /* roxo escuro */
+  --warning: #fac91b; /* amarelo */
+  --success: #7dd856; /* verde */
+
+  /* Feedback */
+  --danger: #ff3b30;
+
+  /* Layout */
+  --radius: 18px;
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Noto Sans", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background: radial-gradient(
+      900px 400px at 15% 10%,
+      rgba(61, 222, 255, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 400px at 85% 0%,
+      rgba(167, 119, 236, 0.2),
+      transparent 55%
+    ),
+    radial-gradient(
+      700px 380px at 85% 95%,
+      rgba(250, 201, 27, 0.12),
+      transparent 55%
+    ),
+    var(--bg);
+  padding: 28px 16px;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+/* Centraliza o conteúdo (serve pro seu HTML atual) */
+form#contactForm {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+}
+
+label span {
+  color: var(--danger);
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid #d7dbe6;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.05s ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(61, 222, 255, 0.95);
+  box-shadow: 0 0 0 4px rgba(61, 222, 255, 0.2);
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: rgba(255, 59, 48, 0.7);
+  box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.14);
+}
+
+/* Mensagem de erro (seu HTML usa <small class="error">) */
+small.error {
+  display: block;
+  min-height: 18px; /* evita “pular” layout quando aparece */
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--danger);
+}
+
+/* Botão */
+button[type="submit"] {
+  width: 100%;
+  margin-top: 16px;
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #06202a;
+  background: linear-gradient(135deg, var(--primary-2), var(--primary));
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+
+button[type="submit"]:hover {
+  filter: brightness(1.03);
+  transform: translateY(-1px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Extra: um “badge” opcional se você quiser destacar “* obrigatório” */
+.required-hint {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(250, 201, 27, 0.16);
+  color: #6b4e00;
+  font-weight: 700;
+  font-size: 12px;
+}
